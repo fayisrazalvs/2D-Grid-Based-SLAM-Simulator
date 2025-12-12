@@ -28,5 +28,16 @@ This repository is meant to track my progress as I build up both my C++ skills a
 
 If you’re just starting out with C++ or robotics like me, feel free to follow along, I’m keeping the code simple and focusing on clarity over complexity.
 
+# Concept/Theory
 
+## 1. How a Robot estimates where it is (Localization)
 
+*Robot localization is a robot's ability to know its own position and orientation (pose) in an environment.*
+
+**Pose**: Position(x, y), Orientation(theta) in a frame.
+
+The robot estimates its pose by combining two things: 
+
+	* What the robot thinks it did (motion prediction) — e.g., “I drove forward 1 m and turned 10°.”
+
+	* What the robot senses about the world (measurements) — e.g., “I see a wall 1.2 m to my left.”
