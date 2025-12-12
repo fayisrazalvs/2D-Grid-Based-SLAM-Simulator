@@ -1,4 +1,4 @@
-# <ins> 2D Grid Based SLAM SIMULATOR </ins>
+# 2D Grid Based SLAM SIMULATOR
 
 This is a small personal project where I’m teaching myself to build a very simple version of a SLAM (Simultaneous Localization and Mapping) system.
 
@@ -27,3 +27,4 @@ I’ll be implementing everything gradually as I get familiar with the concepts:
 This repository is meant to track my progress as I build up both my C++ skills and my understanding of robotics algorithms. The idea is to learn by doing, start small, and grow the project over time.
 
 If you’re just starting out with C++ or robotics like me, feel free to follow along — I’m keeping the code simple and focusing on clarity over complexity.
+
