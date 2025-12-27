@@ -1,43 +1,34 @@
-# 2D Grid Based SLAM Simulator
+# 2D SLAM Simulation in C++ (Learning Project)
 
-This is a small personal project where I’m teaching myself to build a very simple version of a SLAM (Simultaneous Localization and Mapping) system.
+## Overview
+A ground-up C++ implementation of 2D SLAM simulation.
 
-The goal isn’t to create a highly optimized or production level SLAM algorithm, the aim of the project is for me to understand the fundamentals of:
+The objective is to understand how a robot can estimate its position and concurrently build a map of its environment using only sensor data, without relying on any external libraries or frameworks.
 
-1. How a robot estimates where it is
+This project is deliberately kept simple and software-based, focusing on **core concepts rather than performance or real hardware.
 
-2. How it builds a map of its surroundings
+---
+## Problem Statement:
+In real-world, a robot often starts with:
 
-3. How sensor data can be fused to update its position
+- No map of the environment
+- No exact knowledge of position
 
-4. How SLAM works step-by-step behind the scenes
+But, the robot has to:
 
-I’ll be implementing everything gradually as I get familiar with the concepts:
+- Figure out **where it is**
+- Create a **map of its surroundings**
+- Update both continuously as it moves
 
-1. coordinate transforms
+The aim of this project is to figure out, how this problem could be solved within a controlled 2D grid world.
+[Why 2D grid world?: It's easier than 3D :)]
 
-2. Simple motion models
+## What This Project Does
+- Simulates the representation of a **2D grid-based world** with walls and empty space
+- represents a robot moving inside this world
+- Estimates the robot's position using movement and sensor readings
+- Gradually builds a map based on what the robot observes
+- Updates position estimates as new sensor data become available
+[Here sensors are not actual physical sensors but, functions in code]
 
-3. Simulated sensor data
-
-4. A minimal occupancy grid map
-
-5. A basic EKF / particle filter (eventually)
-
-This repository is meant to track my progress as I build up both my C++ skills and my understanding of robotics algorithms. The idea is to learn by doing, start small, and grow the project over time.
-
-If you’re just starting out with C++ or robotics like me, feel free to follow along, I’m keeping the code simple and focusing on clarity over complexity.
-
-# Concept/Theory
-
-## 1. How a Robot estimates where it is (Localization)
-
-*Robot localization is a robot's ability to know its own position and orientation (pose) in an environment.*
-
-**Pose**: Position(x, y), Orientation(theta) in a frame.
-
-The robot estimates its pose by combining two things: 
-
-	* What the robot thinks it did (motion prediction) — e.g., “I drove forward 1 m and turned 10°.”
-
-	* What the robot senses about the world (measurements) — e.g., “I see a wall 1.2 m to my left.”
+The simulation runs entirely in the console and focuses on **logic and reasoning**, not graphics.
